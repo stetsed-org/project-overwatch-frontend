@@ -11,7 +11,7 @@
   onMount(() => {
     const token = getCookie('Token'); // get the value of the "Token" cookie
     if (token) {
-      authtoken = token; // set authtoken variable if "Token" cookie is set
+      authToken = token; // set authtoken variable if "Token" cookie is set
     }
   });
 
