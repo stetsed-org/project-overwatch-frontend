@@ -1,38 +1,11 @@
-# create-svelte
+# Project Overwatch Frontend
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a project which I wipped up quickly to allow me to (from a database) check if anybody has been within +/- 20 blocks of the given coords since the time given and with an authorization token. This is the frontend part which is built with Svelte and Typescript. It has a nav bar and the "Overwatch" page which let's you enter the X and Y coordinates, the date since, and the authorization token which it then sends to the backend which you can find [here](https://github.com/Stetsed/project-overwatch-backend)
 
-## Creating a project
+## Technologies
 
-If you're seeing this, you've probably already done this step. Congrats!
+UI Framework: [Svelte](https://svelte.dev/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+SSR Framework: [SvelteKit](https://kit.svelte.dev/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+CSS Framework: [TailwindCSS](https://tailwindcss.com/)
