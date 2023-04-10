@@ -4,7 +4,7 @@
 
   let authToken: string;
   let xCoordinate: number;
-  let yCoordinate: number;
+  let zCoordinate: number;
   let startTime: string;
   let responseData: Array<{ ID: number; Name: string; Date: string; X: number; Y: number }> = [];
 
@@ -20,14 +20,14 @@
 
     document.cookie = `Token=${authToken}`; // set the "Token" cookie to the value of the authToken variable
 
-    const response = await fetch('http://overwatch.selfhostable.net:3001/api/data', {
+    const response = await fetch('/api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         xCoordinate,
-        yCoordinate,
+        zCoordinate,
         startTime,
         authToken, 
       }),
@@ -48,8 +48,8 @@
     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" id="x-coordinate" bind:value={xCoordinate} required />
   </div>
   <div class="mb-4">
-    <label class="block text-gray-700 font-bold mb-2" for="y-coordinate">Y-Coordinate:</label>
-    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" id="y-coordinate" bind:value={yCoordinate} required />
+    <label class="block text-gray-700 font-bold mb-2" for="z-coordinate">z-Coordinate:</label>
+    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="number" id="z-coordinate" bind:value={zCoordinate} required />
   </div>
   <div class="mb-4">
     <label class="block text-gray-700 font-bold mb-2" for="start-time">Start Time:</label>
@@ -70,17 +70,17 @@
         <th>Name</th>
         <th>Date</th>
         <th>X</th>
-        <th>Y</th>
+        <th>Z</th>
       </tr>
     </thead>
     <tbody>
-      {#each responseData as { ID, Name, Date, X, Y }}
+      {#each responseData as { ID, Name, Date, X, Z }}
         <tr>
           <td>{ID}</td>
           <td>{Name}</td>
           <td>{Date}</td>
           <td>{X}</td>
-          <td>{Y}</td>
+          <td>{Z}</td>
         </tr>
       {/each}
     </tbody>
