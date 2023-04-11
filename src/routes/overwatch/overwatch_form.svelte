@@ -9,8 +9,8 @@
   let formSubmitted: boolean = false;
 
   const handleSubmit = async (event: Event) => {
-    const filter = `(x > "${xCoordinate - 20}" && x < "${xCoordinate + 20}") && (z > "${zCoordinate - 20}" && z < "${zCoordinate + 20}") && created > "${startTime}"`;
-    const resultList = await pb.collection('global').getList(1, 100,{
+    const filter = `x > ${xCoordinate - 20} && x < ${xCoordinate + 20} && z > ${zCoordinate - 20} && z < ${zCoordinate + 20} && created > "${startTime}"`;
+    const resultList = await pb.collection('global').getList(1, 1000,{
       filter: filter,
     });
     responseData = resultList.items;
