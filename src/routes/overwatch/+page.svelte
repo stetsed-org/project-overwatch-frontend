@@ -1,13 +1,19 @@
 <script>
   import Form from './overwatch_form.svelte';
-  import Nav from '../../utils/nav.svelte';
+  import Nav from '../../lib/nav.svelte';
+  import Login from '../../lib/login.svelte';
+  import { currentUser, pb} from "../../lib/pocketbase.ts";
 </script>
 
 <div>
   <Nav />
 </div>
 
-<div>
+{#if $currentUser}
   <Form />
-</div>
+{:else}
+  <Login />
+{/if}
+
+
 
