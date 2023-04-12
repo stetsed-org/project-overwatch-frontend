@@ -1,6 +1,7 @@
 <script>
   import Form from './overwatch_form.svelte';
   import Nav from '../../lib/nav.svelte';
+  import Footer from '../../lib/footer.svelte';
   import Login from '../../lib/login.svelte';
   import { currentUser, pb} from "../../lib/pocketbase.ts";
 </script>
@@ -15,5 +16,8 @@
   <Login />
 {/if}
 
+<div>
+  <Footer />
+</div>
 
 
