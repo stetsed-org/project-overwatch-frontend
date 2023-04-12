@@ -1,6 +1,6 @@
 <div class="navbar bg-base-200">
   <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">Project Overwatch TDEI</a>
+    <a href="/" class="btn btn-ghost normal-case text-xl">Project Overwatch TDEI</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">

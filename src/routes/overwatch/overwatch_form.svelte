@@ -42,7 +42,7 @@
       </label>
       <input type="datetime-local" class="input input-bordered w-full max-w-xs" bind:value={startTime} required />
     </div>
-    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded" type="submit">Submit</button>
+    <button class="btn btn-md sm:btn-sm md:btn-md lg:btn-lg rounded" type="submit">Submit</button>
   </form>
 {:else}
   <div class="container mx-auto p-4">
