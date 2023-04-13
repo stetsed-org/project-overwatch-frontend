@@ -7,11 +7,13 @@
   <Nav />
 </div>
 
-
-<div class="h-screen items-center grid place-items-center">
-  <div class="text-center">
-    <h1 id="welcome-text" class="text-4xl font-bold text-white opacity transition-opacity duration-1000 ease-in-out">Welcome to the TDEI Overwatch System, this system is classified and releasing it to foreign members will be classified as treason
-    </h1>
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">Welcome</h1>
+      <p class="py-6"> TDEI Overwatch system is the premier surveillance system for world intelligence, do not share with any foreign members or you shall be charged with high treason.</p>
+      <a class="btn btn-primary" href="/overwatch">Overwatch</a> 
+    </div>
   </div>
 </div>
 
