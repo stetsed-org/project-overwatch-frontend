@@ -1,12 +1,22 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { currentUser, pb} from "../../lib/pocketbase.ts";
-
   let xCoordinate: number;
   let zCoordinate: number;
   let startTime: string;
   let responseData: any[] = [];
   let formSubmitted: boolean = false;
+  let amount_of_records: number = 0;
+  let responseDataa: any[] = [];
+
+  onMount(async () => {
+    const resultListt = await pb.collection('global_amount').getList(1, 1);
+    responseDataa = resultListt.items;
+
+    for (let i = 0; i < responseDataa.length; i++) {
+      amount_of_records = responseDataa[i].amount;
+    }
+  });
 
   const handleSubmit = async (event: Event) => {
     const filter = `x > ${xCoordinate - 20} && x < ${xCoordinate + 20} && z > ${zCoordinate - 20} && z < ${zCoordinate + 20} && created > "${startTime}"`;
@@ -23,6 +33,15 @@
 </script>
 
 {#if !formSubmitted}
+  <div class="stats shadow">  
+    <div class="stat">
+      <div class="stat-figure text-secondary">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      </div>
+      <div class="stat-title">Amount of Entries</div>
+      <div class="stat-value text-secondary">{amount_of_records}</div>
+    </div>
+  </div>
   <form on:submit={handleSubmit}>
     <div class="form-control w-full max-w-xs">
       <label class="label">
