@@ -44,22 +44,22 @@
   </div>
   <form on:submit={handleSubmit}>
     <div class="form-control w-full max-w-xs">
-      <label class="label">
+      <label class="label" for="xCoordinate">
         <span class="label-text">X-Coordinate</span>
       </label>
-      <input type="number" placeholder="Enter X Coordinate" class="input input-bordered w-full max-w-xs" bind:value={xCoordinate} required />
+      <input type="number" id="xCoordinate" placeholder="Enter X Coordinate" class="input input-bordered w-full max-w-xs" bind:value={xCoordinate} required />
     </div>
     <div class="form-control w-full max-w-xs">
-      <label class="label">
+      <label class="label" for="zCoordinate">
         <span class="label-text">Z-Coordinate</span>
       </label>
-      <input type="number" placeholder="Enter Z Coordinate" class="input input-bordered w-full max-w-xs" bind:value={zCoordinate} required />
+      <input type="number" id="zCoordinate" placeholder="Enter Z Coordinate" class="input input-bordered w-full max-w-xs" bind:value={zCoordinate} required />
     </div>
     <div class="form-control w-full max-w-xs">
-      <label class="label">
+      <label class="label" for="startTime">
         <span class="label-text">Start Time</span>
       </label>
-      <input type="datetime-local" class="input input-bordered w-full max-w-xs" bind:value={startTime} required />
+      <input type="datetime-local" id="startTime" class="input input-bordered w-full max-w-xs" bind:value={startTime} required />
     </div>
     <button class="btn btn-md sm:btn-sm md:btn-md lg:btn-lg rounded" type="submit">Submit</button>
   </form>
