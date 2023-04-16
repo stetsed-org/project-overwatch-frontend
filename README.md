@@ -1,6 +1,6 @@
 # Project Overwatch Frontend
 
-This is a project which I wipped up quickly to allow me to (from a database) check if anybody has been within +/- 20 blocks of the given coords since the time given and with an authorization token. This is the frontend part which is built with Svelte and Typescript. It has a nav bar and the "Overwatch" page which let's you enter the X and Y coordinates, the date since which will retrieve the data from the database. Inside of the API route you can find the old code for the MySL database backend from before I transitioned to PocketBase.
+Project Overwatch is a project to allow the surveillance and replaying of the dynmap information from a minecraft servers dynmap. It combines a Rust Scanner (Currently closed Source) which logs all data to the pocketbase backend. After which you have the frontend which is written with the below technologies to allow people to browse the information collected, such as finding who has been at a specific coordinates since a specific time, a heatmap to see since the date given where everybody has been. It is a hobby project I made in a short period for a Minecraft Server I played on.
 
 ## Technologies
 
