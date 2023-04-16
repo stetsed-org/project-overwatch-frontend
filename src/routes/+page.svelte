@@ -1,11 +1,5 @@
 <script>
-  import Nav from '../lib/nav.svelte';
-  import Footer from '../lib/footer.svelte';
 </script>
-
-<div>
-  <Nav />
-</div>
 
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content text-center">
@@ -16,10 +10,3 @@
     </div>
   </div>
 </div>
-
-<div>
-  <Footer />
-</div>
-
-
-
