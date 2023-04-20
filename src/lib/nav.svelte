@@ -6,6 +6,7 @@
     <ul class="menu menu-horizontal px-1">
       <li><a href="/">Home</a></li>
       <li><a href="/overwatch">Overwatch</a></li>
+      <li><a href="/statistics">Statistics</a></li>
     </ul>
   </div>
 </div>
