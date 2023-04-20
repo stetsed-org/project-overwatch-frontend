@@ -88,7 +88,7 @@
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4" on:click={handleChangeName}>Change Information</button>
     {#if responseData.length > 0}
       {#if formSubmitted}
-        <div class="bg-[url('map.png')] w-[1000px]">
+        <div class="bg-[url('https://cdn.selfhostable.net/map.png')] w-[1000px]">
           <canvas bind:this={canvas} width={width} height={height} style="border: 1px solid;"></canvas>
         </div>
       {/if} 
