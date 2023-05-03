@@ -4,6 +4,7 @@ services:
   watchtower:
     image: containrrr/watchtower
     container_name: watchtower
+    restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
@@ -14,5 +15,6 @@ services:
   project-overwatch-frontend:
     image: ghcr.io/stetsed-org/project-overwatch-frontend:main
     container_name: project-overwatch-frontend
+    restart: unless-stopped
     ports:
       - "3000:3000"
