@@ -12,7 +12,7 @@ services:
       - WATCHTOWER_SCHEDULE=0 0 * * * *
       
   project-overwatch-frontend:
-    image: gchr.io/stetsed-org/project-overwatch-frontend:main
+    image: ghcr.io/stetsed-org/project-overwatch-frontend:main
     container_name: project-overwatch-frontend
     ports:
       - "3000:3000"
