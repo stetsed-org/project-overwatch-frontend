@@ -6,8 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-runs-on: [self-hosted]
-
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
@@ -17,6 +15,7 @@ env:
 
 jobs:
   build:
+    runs-on: [self-hosted]
 
     runs-on: ubuntu-latest
     permissions:
