@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=Europe/Amsterdam
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_SCHEDULE=0 0 * * * *
+      
+  project-overwatch-frontend:
+    image: gchr.io/stetsed-org/project-overwatch-frontend:main
+    container_name: project-overwatch-frontend
+    ports:
+      - "3000:3000"
