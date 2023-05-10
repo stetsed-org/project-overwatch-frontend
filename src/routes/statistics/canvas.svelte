@@ -42,7 +42,7 @@
   async function fetchData() {
     event.preventDefault();
     try {
-      let filter = `account ~ '${username}'`;
+      let filter = `account ~ '${username}' && world = 'world'`;
       if (startTime) {
         filter += ` && created > '${startTime}'`;
       }
