@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { currentUser, pb } from "../../lib/pocketbase.ts";
+  import { pb } from "../../lib/pocketbase.ts";
   let xCoordinate: number;
   let zCoordinate: number;
   let startTime: string;
@@ -10,6 +10,7 @@
   let responseDataa: any[] = [];
 
   onMount(async () => {
+    pb.collection("users").authRefresh();
     const resultListt = await pb.collection("global_amount").getList(1, 1);
     responseDataa = resultListt.items;
 
@@ -19,6 +20,7 @@
   });
 
   const handleSubmit = async (event: Event) => {
+    pb.collection("users").authRefresh();
     const filter = `x > ${xCoordinate - 20} && x < ${xCoordinate + 20} && z > ${
       zCoordinate - 20
     } && z < ${zCoordinate + 20} && created > "${startTime}"`;
